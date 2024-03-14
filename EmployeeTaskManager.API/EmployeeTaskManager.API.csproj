@@ -14,6 +14,13 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Models\LoginModels\" />
+    <Folder Include="Models\Validators\" />
+    <Folder Include="Models\RegisterModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EmployeeTaskManager.Domain\EmployeeTaskManager.Domain.csproj" />
   </ItemGroup>
 
 </Project>

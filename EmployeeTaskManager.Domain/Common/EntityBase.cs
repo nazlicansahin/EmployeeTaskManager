@@ -15,9 +15,10 @@ namespace EmployeeTaskManager.Domain.Common
 
         public DateTime? ModifiedOn { get; set; }
         public string? ModifiedByUserId { get; set; }
-        public DateTimeOffset? LastModifiedOn { get ; set; }
+        public DateTimeOffset? LastModifiedOn { get; set; }
         public bool? IsDeleted { get; set; }
         public string? DeletedByUserId { get; set; }
         public DateTimeOffset? DeletedOn { get; set; }
-        DateTimeOffset? ICreatedByEntity.CreatedOn { get; set ; }
+        DateTimeOffset? ICreatedByEntity.CreatedOn { get; set; }
     }
+}
