@@ -1,3 +1,4 @@
+using EmployeeTaskManager.API.Repositories;
 using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,7 +19,8 @@ IConfiguration configuration = new ConfigurationBuilder()
     .Build();
 
 var mongoclient = new MongoClient(configuration.GetConnectionString("MongoDb"));
-builder.Services.AddSingleton<MongoClient>(mongoclient);
+builder.Services.AddSingleton<IMongoClient>(mongoclient);
+builder.Services.AddTransient<IEmployeeTaskRepository, EmployeeTaskRepository>();
 
 
 // Configure the HTTP request pipeline.
