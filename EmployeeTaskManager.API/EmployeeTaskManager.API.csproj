@@ -8,15 +8,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
     <PackageReference Include="MongoDB.Driver" Version="2.24.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\LoginModels\" />
-    <Folder Include="Models\Validators\" />
-    <Folder Include="Models\RegisterModels\" />
+    <Folder Include="Repositories\Models\LoginModels\" />
+    <Folder Include="Repositories\Models\Validators\" />
+    <Folder Include="Repositories\Models\RegisterModels\" />
   </ItemGroup>
 
   <ItemGroup>

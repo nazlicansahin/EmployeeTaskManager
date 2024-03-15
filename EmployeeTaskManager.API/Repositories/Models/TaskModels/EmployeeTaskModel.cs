@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmployeeTaskManager.Application.Repositories
+namespace EmployeeTaskManager.API.Repositories.Models.TaskModels
 {
-    public class TaskModel
+    public class EmployeeTaskModel
     {
         [BsonId]
 

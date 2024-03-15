@@ -5,7 +5,7 @@ namespace EmployeeTaskManager.Domain.Entities
     {
         public Guid PersonId { get; set; }
         public Guid TaskId { get; set; }
-        public Task Task { get; set; }
+        public EmployeeTask Task { get; set; }
 
     }
 }

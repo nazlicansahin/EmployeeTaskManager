@@ -1,9 +1,10 @@
 ﻿using EmployeeTaskManager.Domain.Common;
 using EmployeeTaskManager.Domain.Enum;
+using MongoDB.Bson;
 
 namespace EmployeeTaskManager.Domain.Entities;
 
-public class Task : EntityBase<Guid>
+public class EmployeeTask : EntityBase<ObjectId>
 {
     public string? Name { get; set; }
 
