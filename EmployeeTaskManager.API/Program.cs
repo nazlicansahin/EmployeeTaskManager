@@ -10,7 +10,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
 
 //Db connection
 IConfiguration configuration = new ConfigurationBuilder()
@@ -22,6 +21,8 @@ var mongoclient = new MongoClient(configuration.GetConnectionString("MongoDb"));
 builder.Services.AddSingleton<IMongoClient>(mongoclient);
 builder.Services.AddTransient<IEmployeeTaskRepository, EmployeeTaskRepository>();
 
+var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -29,6 +30,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 
 app.UseHttpsRedirection();
 

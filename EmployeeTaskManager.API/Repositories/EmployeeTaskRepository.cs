@@ -45,7 +45,7 @@ namespace EmployeeTaskManager.API.Repositories
 
         public async Task<IEnumerable<EmployeeTask>> GetByName(string name)
         {
-            var filter = Builders<EmployeeTask>.Filter.Eq(x => x.Name,name);
+            var filter = Builders<EmployeeTask>.Filter.Eq<string>(x => x.Name, name);
             var tasks = await _employeeTasks.Find(filter).ToListAsync();
             return tasks;
         }

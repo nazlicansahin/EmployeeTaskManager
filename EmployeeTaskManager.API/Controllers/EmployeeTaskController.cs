@@ -29,9 +29,9 @@ namespace EmployeeTaskManager.API.Controllers
             return new JsonResult(Task);
         }
         [HttpGet("getbyName/{Name}")]
-        public async Task<IActionResult> GetbyName(string name)
+        public async Task<IActionResult> GetbyName(string Name)
         {
-            var Task = await _employeeTaskRepository.GetByName(name);
+            var Task = await _employeeTaskRepository.GetByName(Name);
             return new JsonResult(Task);
         }
         [HttpPut("get/{id}")]
@@ -43,11 +43,12 @@ namespace EmployeeTaskManager.API.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(string id)
         {
+
             var Task = await _employeeTaskRepository.Delete(ObjectId.Parse(id));
             return new JsonResult(Task);
         }
         [HttpGet("Fetch")]
-        public async Task<IActionResult> GetAll(string id)
+        public async Task<IActionResult> GetAll()
         {
             var Task = await _employeeTaskRepository.GetAll();
             return new JsonResult(Task);
